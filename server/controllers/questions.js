@@ -19,13 +19,27 @@ export const getQuestions = async (req, res) => {
 // Create a new question
 export const createQuestion = async (req, res) => {
   const { quizId } = req.params;
-  const { questionText, answerA, answerB, answerC, answerD, correctAnswer } =
-    req.body;
+  const {
+    question_text,
+    answer_a,
+    answer_b,
+    answer_c,
+    answer_d,
+    correct_answer,
+  } = req.body;
 
   try {
     const result = await pool.query(
       "INSERT INTO questions (quiz_id, question_text, answer_a, answer_b, answer_c, answer_d, correct_answer) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
-      [quizId, questionText, answerA, answerB, answerC, answerD, correctAnswer]
+      [
+        quizId,
+        question_text,
+        answer_a,
+        answer_b,
+        answer_c,
+        answer_d,
+        correct_answer,
+      ]
     );
     res.status(201).json(result.rows[0]);
   } catch (err) {
