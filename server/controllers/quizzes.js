@@ -3,7 +3,7 @@ import { pool } from "../config/database.js";
 // Get all quizzes
 export const getQuizzes = async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM quizzes");
+    const result = await pool.query("SELECT * FROM quizzes ORDER BY id DESC");
     res.status(200).json(result.rows);
   } catch (err) {
     console.error(err);
