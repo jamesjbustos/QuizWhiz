@@ -40,6 +40,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
+https://github.com/jamesjbustos/QuizWhiz/assets/45052719/9cfb0ec3-a156-445d-b5d4-c7a5f6a52039
+
 ## Notes
 
 Had a lot of fun with this project, feeling more confident with handling requests and defining useful routes and controllers. Plan to keep working on making my code cleaner and scalable. Apologies if my project was not relevant to the car example, i read the project prompt and thought we could introduce our own ideas. Hopefully i covered all the concepts, Thank you.
