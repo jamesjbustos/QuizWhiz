@@ -4,3 +4,7 @@ nav {
   padding-right: 50px;
   padding-top: 10px;
 }
+
+nav h1 {
+  margin: 0;
+}
