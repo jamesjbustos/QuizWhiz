@@ -9,7 +9,7 @@ const QuizList = () => {
     try {
       const response = await fetch("/api/quizzes");
       if (!response.ok) {
-        throw new Error("Failed to fetch quizzes");
+        throw new Error("😔 Failed to fetch quizzes");
       }
       const data = await response.json();
       setQuizzes(data);
